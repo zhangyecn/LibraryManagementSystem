@@ -8,7 +8,7 @@ namespace LibraryManagementSystem
 {
     public class Inventory
     {
-        private List<Book> _books;
+        private List<Book> _books = new List<Book>();
         private Dictionary<string, Location> _isbnLocationMap = new Dictionary<string, Location>();
         private Dictionary<Location, List<Book>> _locationBooksMap = new Dictionary<Location, List<Book>>();
 

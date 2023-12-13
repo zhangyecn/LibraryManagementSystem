@@ -22,7 +22,9 @@
 
             Book.ReadBooks(testString);
             var result = Book.FindBooks("*Hans*");
-
+            Console.WriteLine($"Found {result.Count} books.");
+            result = Book.FindBooks("*20*");
+            Console.WriteLine($"Found {result.Count} books.");
         }
     }
 }

@@ -68,15 +68,9 @@ public class Book : Item
         if (searchValues.Length > 0)
         {
             searchValues = searchValues.Select(s => s.Replace("*", "")).ToArray();
-            //foreach (var searchValue in searchValues)
-            //{
-            //    foundedBooks = SearchInBooks(searchValue, foundedBooks);
-            //}
-
-            //return foundedBooks;
             return searchValues.Aggregate(foundedBooks, (current, searchValue) => SearchInBooks(searchValue, current));
         }
-        else { return foundedBooks; }
+        return foundedBooks;
     }
 
     private static List<Book> SearchInBooks(string searchString, List<Book> books)

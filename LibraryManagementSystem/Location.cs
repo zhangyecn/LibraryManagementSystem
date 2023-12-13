@@ -19,5 +19,7 @@ namespace LibraryManagementSystem
                     this.RowNo == other.RowNo &&
                     this.BookShelfNo == other.BookShelfNo);
         }
+
+        public override int GetHashCode() => (RoomNo, RowNo, BookShelfNo).GetHashCode();
     }
 }
